@@ -1,0 +1,105 @@
+<app-nav></app-nav>
+<div id="menu">
+    <div id="divFiltri" class="menu">
+        <h1 id="titoloFiltri">FILTRI DI RICERCA</h1>
+        <hr>
+        <div class="divFiltro">
+            <h2 class="sottotitoliFiltro">Modello</h2>
+            <form class="d-flex" role="search" id="formModello">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              </form>
+        </div>
+        <div class="divFiltro">
+            <h2 class="sottotitoliFiltro">Kilometri</h2>
+            <select class="form-select" aria-label="Default select example" id="selectKilometri">
+                <option selected>Seleziona la quantità di km</option>
+                <option value="1">0 km</option>
+                <option value="2">meno di 50 mila km</option>
+                <option value="3">tra 50mila e 100mila km</option>
+                <option value="4">tra 100mila e 200mila km</option>
+                <option value="5">più di 200mila</option>
+              </select>
+        </div>
+        <div class="divFiltro">
+            <h2 class="sottotitoliFiltro">Ore</h2>
+            <select class="form-select" aria-label="Default select example" id="selectKilometri">
+                <option selected>Seleziona la quantità di km</option>
+                <option value="1">0</option>
+                <option value="2">meno di 50</option>
+                <option value="3">tra 50 e 100</option>
+                <option value="4">più di 100</option>
+              </select>
+        </div>
+        <div class="divFiltro">
+            <h2 class="sottotitoliFiltro">Cilindrata</h2>
+            <select class="form-select" aria-label="Default select example" id="selectKilometri">
+                <option selected>Seleziona la quantità di km</option>
+                <option value="1">50cc</option>
+                <option value="2">85cc</option>
+                <option value="3">125</option>
+                <option value="4">250</option>
+                <option value="5">300</option>
+                <option value="6">350</option>
+                <option value="7">500</option>
+                <option value="8">701</option>
+              </select>
+        </div>
+        <div class="divFiltro">
+            <h2 class="sottotitoliFiltro">Prezzo</h2>
+            <form class="d-flex" role="search" id="formModello">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              </form>
+        </div>
+        <hr>
+    <div class="dropdown card-footer">
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-secondary" routerLink="../profilo">
+                <img src="https://avatars.githubusercontent.com/u/163026351?v=4" alt="" width="32" height="32" class="rounded-circle me-2">
+              Mattia Bagatella
+            </button>
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item active" routerLink="../profilo">Impostazioni Profilo</a></li>
+                <li><a class="dropdown-item" routerLink="../preferiti">Controlla Preferiti</a></li>
+                <li><a class="dropdown-item">Vendi</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" routerLink="">Log Out</a></li>
+              </ul>
+          </div>
+    </div>
+
+</div>
+
+<div id="divMoto">
+  
+<div class="motosTitle oggInVendita">
+  <h1 class="oggInVendita">Moto Trovate</h1>
+  <hr class="oggInVendita">
+</div>
+<div class="motoContainer oggInVendita">
+@for (motor of cards; track $index) {
+    <div class="motoCard oggInVendita">
+      <img src="{{motor.img}}" alt="" class="oggInVendita">
+      <h2 class="oggInVendita">{{motor.nome}}</h2>
+      <p class="oggInVendita">{{motor.km}}km</p>
+      <p class="oggInVendita">{{motor.ore}}h</p>
+      <p class="oggInVendita">{{motor.cc}}cc</p>
+      <p class="oggInVendita">{{motor.prezzo}}Euro</p>
+      <button class="oggInVendita" (click)="cambiaLike()"><i [class]="miPiace"></i></button>
+      <button class="oggInVendita" routerLink="../chat"><i class="bi bi-chat-left-text"></i></button>
+    </div>
+}
+</div>
+
+<div class="buttonsPagine">
+  <button type="button" class="btn btn-secondary">1</button>
+        <button type="button" class="btn btn-secondary">2</button>
+        <button type="button" class="btn btn-secondary">3</button>
+</div>
+        
+</div>
+        
+</div>
+

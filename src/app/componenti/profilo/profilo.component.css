@@ -1,0 +1,49 @@
+#contieniProfilo{
+    justify-content: center;
+    text-align: center;
+}
+#fotoProfilo{
+    margin-top: 30px;
+    border-radius: 50%;
+    width: 25%;
+    height: 25%;
+}
+.modificaProfilo{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+.modificaProfilo button{
+    border-radius: 20%;
+    height: 70%;
+    margin-left: 2%;
+    vertical-align: middle;
+    margin-top: 1%;
+}
+.modificaProfilo i{
+    color: white;
+}
+.LogButton{
+    border-radius: 30px;
+    background-color: rgb(32, 27, 27);
+    color: rgb(255, 255, 255);
+    width: 15%;
+    margin-top: 5px;
+    border: none;
+    margin: 15px 0 15px;
+}
+.contieniArticoli{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.contieniFoto{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+   
+}
+.fotoMoto{
+    height: 59%;
+    scroll-snap-align: center;
+}
